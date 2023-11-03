@@ -9,14 +9,6 @@ node {
 	npmVersion = "5.6.0"
 }
 
-repositories.whenObjectAdded {
-    if (it instanceof IvyArtifactRepository) {
-        metadataSources {
-            artifact()
-        }
-    }
-}
-
 //declare a build task
 task build
 
@@ -36,7 +28,6 @@ task zip(type: Zip) {
 }
 
 //declare task dependencies
-// my comment NEW
 build.dependsOn zip
 zip.dependsOn npm_build
 npm_build.dependsOn npm_test
