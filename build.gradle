@@ -20,7 +20,7 @@ repositories.whenObjectAdded {
 //declare a build task
 task build
 
-//declare a task to create a zip of the app
+//declare a task to create a zip of th
 task zip(type: Zip) {
 	from ('.') {
 		include "*"
